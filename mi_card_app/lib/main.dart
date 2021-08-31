@@ -9,38 +9,73 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Mi Card'),
-        ),
+        // appBar: AppBar(
+        //   title: Text('Mi Card'),
+        // ),
         body: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Container(
-                  height: 120.0,
-                  width: 120.0,
-                  color: Colors.red,
-                  child: Text('Container 1'),
-                  padding: EdgeInsets.all(15.0)
+              CircleAvatar(
+                backgroundColor: Colors.blueGrey,
+                radius: 50.0,
+                backgroundImage: AssetImage('images/doctor.png'),
               ),
-              Container(
-                  height: 120.0,
-                  width: 120.0,
-                  color: Colors.green,
-                  child: Text('Container 2'),
-                  padding: EdgeInsets.all(15.0)
+              Text(
+                'Dr Fatema Khalid',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                  fontFamily: 'Pacifico',
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Container(
-                  height: 120.0,
-                  width: 120.0,
-                  color: Colors.blue,
-                  child: Text('Container 3'),
-                  padding: EdgeInsets.all(15.0)
+              Text(
+                'MBBS, DMC',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.blueGrey,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Container(
-                width: double.infinity,
+              SizedBox(
+                height: 20.0,
+                width: 100.0,
+                child: Divider(
+                  color: Colors.white60,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal[300],
+                    ),
+                  title: Text(
+                    '+8801365274893',
+                    style: TextStyle(
+                      color: Colors.blueGrey,
+                    ),
+                    )
+                ),
+              ),
+                 Card(
+                margin: EdgeInsets.symmetric(vertical: 5.0,horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal[300],
+                    ),
+                  title: Text(
+                    'dr.fatema@gmail.com',
+                    style: TextStyle(
+                      color: Colors.blueGrey,
+                    ),
+                    )
+                ),
               ),
             ],
           ),
